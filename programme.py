@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 
 """effet de ms sur Cm=f(alpha), expliquer pente et stabilité statique"""
 aero_m = aero_model.Airbus_A321_200()
-print(f'{aero_m.name}')
 aero_m.set_options(stall=False, buffeting=False, wave_drag=False)
 aero_m.set_mass(aero_m.m_design) 
 mach, q, tas,dtrim, dm = aero_m.mach_design, 0, aero_m.atm.tas_from_mach_altp(aero_m.mach_design, aero_m.altp_ref),0, 0        #la TAS ne doit pas être nulle
